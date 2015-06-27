@@ -1,0 +1,439 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F1DF0E981B3EAE5800D8A019 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1DF0E971B3EAE5800D8A019 /* main.m */; };
+		F1DF0E9B1B3EAE5800D8A019 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1DF0E9A1B3EAE5800D8A019 /* AppDelegate.m */; };
+		F1DF0E9E1B3EAE5800D8A019 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1DF0E9D1B3EAE5800D8A019 /* ViewController.m */; };
+		F1DF0EA11B3EAE5800D8A019 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1DF0E9F1B3EAE5800D8A019 /* Main.storyboard */; };
+		F1DF0EA31B3EAE5800D8A019 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1DF0EA21B3EAE5800D8A019 /* Images.xcassets */; };
+		F1DF0EA61B3EAE5800D8A019 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1DF0EA41B3EAE5800D8A019 /* LaunchScreen.xib */; };
+		F1DF0EB21B3EAE5800D8A019 /* Inoho_ConnectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1DF0EB11B3EAE5800D8A019 /* Inoho_ConnectTests.m */; };
+		F1DF0EBC1B3EAEBC00D8A019 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1DF0EBB1B3EAEBC00D8A019 /* Foundation.framework */; };
+		F1DF0EBF1B3ED48B00D8A019 /* inohoConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F1DF0EBE1B3ED48B00D8A019 /* inohoConnectionManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F1DF0EAC1B3EAE5800D8A019 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1DF0E8A1B3EAE5700D8A019 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F1DF0E911B3EAE5800D8A019;
+			remoteInfo = "Inoho Connect";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F1DF0E921B3EAE5800D8A019 /* Inoho Connect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Inoho Connect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1DF0E961B3EAE5800D8A019 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1DF0E971B3EAE5800D8A019 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F1DF0E991B3EAE5800D8A019 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F1DF0E9A1B3EAE5800D8A019 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F1DF0E9C1B3EAE5800D8A019 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F1DF0E9D1B3EAE5800D8A019 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F1DF0EA01B3EAE5800D8A019 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F1DF0EA21B3EAE5800D8A019 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F1DF0EA51B3EAE5800D8A019 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F1DF0EAB1B3EAE5800D8A019 /* Inoho ConnectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Inoho ConnectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1DF0EB01B3EAE5800D8A019 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1DF0EB11B3EAE5800D8A019 /* Inoho_ConnectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Inoho_ConnectTests.m; sourceTree = "<group>"; };
+		F1DF0EBB1B3EAEBC00D8A019 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F1DF0EBD1B3ED48B00D8A019 /* InohoConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InohoConnectionManager.h; sourceTree = "<group>"; };
+		F1DF0EBE1B3ED48B00D8A019 /* inohoConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = inohoConnectionManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F1DF0E8F1B3EAE5800D8A019 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1DF0EBC1B3EAEBC00D8A019 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1DF0EA81B3EAE5800D8A019 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F1DF0E891B3EAE5700D8A019 = {
+			isa = PBXGroup;
+			children = (
+				F1DF0EBB1B3EAEBC00D8A019 /* Foundation.framework */,
+				F1DF0E941B3EAE5800D8A019 /* Inoho Connect */,
+				F1DF0EAE1B3EAE5800D8A019 /* Inoho ConnectTests */,
+				F1DF0E931B3EAE5800D8A019 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F1DF0E931B3EAE5800D8A019 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F1DF0E921B3EAE5800D8A019 /* Inoho Connect.app */,
+				F1DF0EAB1B3EAE5800D8A019 /* Inoho ConnectTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F1DF0E941B3EAE5800D8A019 /* Inoho Connect */ = {
+			isa = PBXGroup;
+			children = (
+				F1DF0EBD1B3ED48B00D8A019 /* InohoConnectionManager.h */,
+				F1DF0EBE1B3ED48B00D8A019 /* inohoConnectionManager.m */,
+				F1DF0E991B3EAE5800D8A019 /* AppDelegate.h */,
+				F1DF0E9A1B3EAE5800D8A019 /* AppDelegate.m */,
+				F1DF0E9C1B3EAE5800D8A019 /* ViewController.h */,
+				F1DF0E9D1B3EAE5800D8A019 /* ViewController.m */,
+				F1DF0E9F1B3EAE5800D8A019 /* Main.storyboard */,
+				F1DF0EA21B3EAE5800D8A019 /* Images.xcassets */,
+				F1DF0EA41B3EAE5800D8A019 /* LaunchScreen.xib */,
+				F1DF0E951B3EAE5800D8A019 /* Supporting Files */,
+			);
+			path = "Inoho Connect";
+			sourceTree = "<group>";
+		};
+		F1DF0E951B3EAE5800D8A019 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F1DF0E961B3EAE5800D8A019 /* Info.plist */,
+				F1DF0E971B3EAE5800D8A019 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F1DF0EAE1B3EAE5800D8A019 /* Inoho ConnectTests */ = {
+			isa = PBXGroup;
+			children = (
+				F1DF0EB11B3EAE5800D8A019 /* Inoho_ConnectTests.m */,
+				F1DF0EAF1B3EAE5800D8A019 /* Supporting Files */,
+			);
+			path = "Inoho ConnectTests";
+			sourceTree = "<group>";
+		};
+		F1DF0EAF1B3EAE5800D8A019 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F1DF0EB01B3EAE5800D8A019 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F1DF0E911B3EAE5800D8A019 /* Inoho Connect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1DF0EB51B3EAE5800D8A019 /* Build configuration list for PBXNativeTarget "Inoho Connect" */;
+			buildPhases = (
+				F1DF0E8E1B3EAE5800D8A019 /* Sources */,
+				F1DF0E8F1B3EAE5800D8A019 /* Frameworks */,
+				F1DF0E901B3EAE5800D8A019 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Inoho Connect";
+			productName = "Inoho Connect";
+			productReference = F1DF0E921B3EAE5800D8A019 /* Inoho Connect.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F1DF0EAA1B3EAE5800D8A019 /* Inoho ConnectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1DF0EB81B3EAE5800D8A019 /* Build configuration list for PBXNativeTarget "Inoho ConnectTests" */;
+			buildPhases = (
+				F1DF0EA71B3EAE5800D8A019 /* Sources */,
+				F1DF0EA81B3EAE5800D8A019 /* Frameworks */,
+				F1DF0EA91B3EAE5800D8A019 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F1DF0EAD1B3EAE5800D8A019 /* PBXTargetDependency */,
+			);
+			name = "Inoho ConnectTests";
+			productName = "Inoho ConnectTests";
+			productReference = F1DF0EAB1B3EAE5800D8A019 /* Inoho ConnectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F1DF0E8A1B3EAE5700D8A019 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = Inoho;
+				TargetAttributes = {
+					F1DF0E911B3EAE5800D8A019 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					F1DF0EAA1B3EAE5800D8A019 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = F1DF0E911B3EAE5800D8A019;
+					};
+				};
+			};
+			buildConfigurationList = F1DF0E8D1B3EAE5700D8A019 /* Build configuration list for PBXProject "Inoho Connect" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F1DF0E891B3EAE5700D8A019;
+			productRefGroup = F1DF0E931B3EAE5800D8A019 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F1DF0E911B3EAE5800D8A019 /* Inoho Connect */,
+				F1DF0EAA1B3EAE5800D8A019 /* Inoho ConnectTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F1DF0E901B3EAE5800D8A019 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1DF0EA11B3EAE5800D8A019 /* Main.storyboard in Resources */,
+				F1DF0EA61B3EAE5800D8A019 /* LaunchScreen.xib in Resources */,
+				F1DF0EA31B3EAE5800D8A019 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1DF0EA91B3EAE5800D8A019 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F1DF0E8E1B3EAE5800D8A019 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1DF0E9E1B3EAE5800D8A019 /* ViewController.m in Sources */,
+				F1DF0E9B1B3EAE5800D8A019 /* AppDelegate.m in Sources */,
+				F1DF0E981B3EAE5800D8A019 /* main.m in Sources */,
+				F1DF0EBF1B3ED48B00D8A019 /* inohoConnectionManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1DF0EA71B3EAE5800D8A019 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1DF0EB21B3EAE5800D8A019 /* Inoho_ConnectTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F1DF0EAD1B3EAE5800D8A019 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F1DF0E911B3EAE5800D8A019 /* Inoho Connect */;
+			targetProxy = F1DF0EAC1B3EAE5800D8A019 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F1DF0E9F1B3EAE5800D8A019 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F1DF0EA01B3EAE5800D8A019 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F1DF0EA41B3EAE5800D8A019 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F1DF0EA51B3EAE5800D8A019 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F1DF0EB31B3EAE5800D8A019 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F1DF0EB41B3EAE5800D8A019 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F1DF0EB61B3EAE5800D8A019 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Inoho Connect/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F1DF0EB71B3EAE5800D8A019 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Inoho Connect/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F1DF0EB91B3EAE5800D8A019 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Inoho ConnectTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Inoho Connect.app/Inoho Connect";
+			};
+			name = Debug;
+		};
+		F1DF0EBA1B3EAE5800D8A019 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Inoho ConnectTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Inoho Connect.app/Inoho Connect";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F1DF0E8D1B3EAE5700D8A019 /* Build configuration list for PBXProject "Inoho Connect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1DF0EB31B3EAE5800D8A019 /* Debug */,
+				F1DF0EB41B3EAE5800D8A019 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1DF0EB51B3EAE5800D8A019 /* Build configuration list for PBXNativeTarget "Inoho Connect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1DF0EB61B3EAE5800D8A019 /* Debug */,
+				F1DF0EB71B3EAE5800D8A019 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F1DF0EB81B3EAE5800D8A019 /* Build configuration list for PBXNativeTarget "Inoho ConnectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1DF0EB91B3EAE5800D8A019 /* Debug */,
+				F1DF0EBA1B3EAE5800D8A019 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F1DF0E8A1B3EAE5700D8A019 /* Project object */;
+}
