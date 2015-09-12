@@ -55,7 +55,7 @@
         [self loadWebView];
     } else {
         //if it fails then show OFFLINE Message
-        NSString *offlineHtml = @"<div style=\"margin-top: 10em\"> <p align=\"center\" style=\"font-size:100px; color:red \"> You Seems To Be Offline!!! </p> </div>";
+        NSString *offlineHtml = @"<div style=\"margin-top: 10em\"> <p align=\"center\" style=\"font-size:20px; color:red \"> You Seems To Be Offline!!! </p> </div>";
         
         [self.webView loadHTMLString: offlineHtml baseURL: NULL];
     }
@@ -74,7 +74,7 @@
     if([curReach currentConnectionState]) {
         [self loadWebView];
     } else {
-        NSString *offlineHtml = @"<div style=\"margin-top: 10em\"> <p align=\"center\" style=\"font-size:100px; color:red \"> You Seems To Be Offline!!! </p> </div>";
+        NSString *offlineHtml = @"<div style=\"margin-top: 10em\"> <p align=\"center\" style=\"font-size:20px; color:red \"> You Seems To Be Offline!!! </p> </div>";
         
         [self.webView loadHTMLString:offlineHtml baseURL: NULL];
     }

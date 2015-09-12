@@ -9,7 +9,7 @@
 
 #import <Foundation/Foundation.h>
 #import "InohoConnectionManager.h"
-//#import "InohoPingManager.h"
+
 //#import "InohoPing.h"
 
 NSString *kInohoConnectionChangeNotification = @"InohoConnectionChangeNotification";
@@ -100,6 +100,8 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
         if([self isItHome: homeip]){
             return homeip;
         } else {
+            self.pingManager = [[InohoPingManager alloc] init];
+            [self.pingManager searchForTheHomeIP ];
             return @"http://cloud.inoho.com/home";
         }
         //return [self getURLByPingingPrefferdIPs];
@@ -132,7 +134,7 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
         
         if (error != nil) {
             NSLog(@"Error parsing JSON.");
-            NSLog(strData);
+            NSLog(@"%@", strData);
         }
         else {
             NSLog(@"Array: %@", jsonObject);
@@ -183,7 +185,7 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
     
     if (reachability == NULL)
     {
-        NSLog(@"Error Reachability is NULL - internet connection not avilable");
+        NSLog(@"Error Reachability is NULL - internet connection not available");
     } else {
         NetworkStatus currentStatus = [self getCurrentNetworkState: _reachabilityRef];
         if(!(currentStatus == NotReachable  || currentStatus == UNKNOWN)){
