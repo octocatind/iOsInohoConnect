@@ -13,7 +13,6 @@
 #import <SystemConfiguration/SystemConfiguration.h>
 #import <netinet/in.h>
 #include <arpa/inet.h>
-#import "InohoPingManager.h"
 
 typedef enum : NSInteger {
     UNKNOWN = 0,
@@ -32,8 +31,6 @@ extern NSString *kInohoConnectionChangeNotification;
 -(BOOL) currentConnectionState;
 -(NSString*) getUrlToLoad;
 //- (BOOL)startNotifier;
-
-@property (nonatomic, strong, readwrite) InohoPingManager * pingManager;
 
 @end
 

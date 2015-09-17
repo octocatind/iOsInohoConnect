@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F1AE1F1F1BA09B8500184DA0 /* InohoPingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F1AE1F1D1BA09B8500184DA0 /* InohoPingManager.m */; };
-		F1AE1F221BA09CB300184DA0 /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = F1AE1F211BA09CB300184DA0 /* SimplePing.m */; };
 		F1DF0E981B3EAE5800D8A019 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1DF0E971B3EAE5800D8A019 /* main.m */; };
 		F1DF0E9B1B3EAE5800D8A019 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1DF0E9A1B3EAE5800D8A019 /* AppDelegate.m */; };
 		F1DF0E9E1B3EAE5800D8A019 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1DF0E9D1B3EAE5800D8A019 /* ViewController.m */; };
@@ -31,10 +29,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F1AE1F1C1BA09B8500184DA0 /* InohoPingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InohoPingManager.h; sourceTree = "<group>"; };
-		F1AE1F1D1BA09B8500184DA0 /* InohoPingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InohoPingManager.m; sourceTree = "<group>"; };
-		F1AE1F201BA09CB300184DA0 /* SimplePing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePing.h; sourceTree = "<group>"; };
-		F1AE1F211BA09CB300184DA0 /* SimplePing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePing.m; sourceTree = "<group>"; };
 		F1DF0E921B3EAE5800D8A019 /* Inoho Connect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Inoho Connect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1DF0E961B3EAE5800D8A019 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1DF0E971B3EAE5800D8A019 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -94,10 +88,6 @@
 		F1DF0E941B3EAE5800D8A019 /* Inoho Connect */ = {
 			isa = PBXGroup;
 			children = (
-				F1AE1F201BA09CB300184DA0 /* SimplePing.h */,
-				F1AE1F211BA09CB300184DA0 /* SimplePing.m */,
-				F1AE1F1C1BA09B8500184DA0 /* InohoPingManager.h */,
-				F1AE1F1D1BA09B8500184DA0 /* InohoPingManager.m */,
 				F1DF0EBD1B3ED48B00D8A019 /* InohoConnectionManager.h */,
 				F1DF0EBE1B3ED48B00D8A019 /* inohoConnectionManager.m */,
 				F1DF0E991B3EAE5800D8A019 /* AppDelegate.h */,
@@ -243,8 +233,6 @@
 				F1DF0E9B1B3EAE5800D8A019 /* AppDelegate.m in Sources */,
 				F1DF0E981B3EAE5800D8A019 /* main.m in Sources */,
 				F1DF0EBF1B3ED48B00D8A019 /* inohoConnectionManager.m in Sources */,
-				F1AE1F221BA09CB300184DA0 /* SimplePing.m in Sources */,
-				F1AE1F1F1BA09B8500184DA0 /* InohoPingManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

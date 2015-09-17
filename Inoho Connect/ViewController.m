@@ -109,7 +109,7 @@
 
 
 - (void)viewDidLayoutSubviews {
-    self.webView.frame = CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height);
+    self.webView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
 }
 
 @end

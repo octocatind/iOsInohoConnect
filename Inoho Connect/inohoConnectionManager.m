@@ -29,6 +29,9 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
 
 @implementation InohoConnectionManager {
     SCNetworkReachabilityRef _reachabilityRef;
+    bool _foundHome;
+    int _numSearches;
+    NSString *_homeIP;
 }
 
 -(BOOL) initializeConnectionManager {
@@ -95,18 +98,19 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
 
 -(NSString*) getUrlToLoad {
     if([self getCurrentNetworkState: _reachabilityRef] == ReachableViaWiFi) {
-        NSString* homeip = @"http://192.168.1.123";
+        NSString* homeip = @"http://192.168.1.121";
         
-        if([self isItHome: homeip]){
+        if([self isItHome: homeip]){//wise guess
             return homeip;
-        } else {
-            self.pingManager = [[InohoPingManager alloc] init];
-            [self.pingManager searchForTheHomeIP ];
-            return @"http://cloud.inoho.com/home";
+        } else {//wise guess failed lets try brute force
+            [self findHomeFromAllAddresses];
+            if(_foundHome) {
+                return _homeIP;
+            } else {//not found let's load cloud
+                return @"http://cloud.inoho.com/home";
+            }
         }
-        //return [self getURLByPingingPrefferdIPs];
     } else {
-        //[self startNotifier];
         return @"http://cloud.inoho.com/home";
     }
     
@@ -147,33 +151,6 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
     }
     return result;
 }
-
-//discovery of device IP will be done once we get a faster way to ping
-
-///////////////////////////     \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-//
-//
-//-(NSString *) getURLByPingingPrefferdIPs {
-//    NSString    *linkToHome = @"";
-//    NSArray *ips = @[@"192.168.1.123"];
-//    for (NSString *ip in ips) {
-//        if([self pingAnIP:ip]) {
-//            linkToHome = ip;
-//            break;
-//        }
-//    }
-//    return linkToHome;
-//}
-
-//-(BOOL) pingAnIP:(NSString *)hostName {
-//    BOOL result = FALSE;
-//    InohoPingManager *inPin = [[InohoPingManager alloc] init];
-//    PingStatus pstat = [inPin runWithHostName:hostName];
-//    return pstat == PING_SUCCESS ? TRUE : FALSE;
-//}
-//
-//
-/////////////////////////////////   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 - (BOOL)reachabilityWithAddress:(const struct sockaddr_in *)hostAddress {
     BOOL result = FALSE;
@@ -237,5 +214,88 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
     }
 }
 
+
+- (void)findHomeFromAllAddresses
+{
+    //dispatch_queue_t backgroundQueue;
+    //backgroundQueue = dispatch_queue_create("com.inoho.bgqueue", DISPATCH_QUEUE_CONCURRENT);//DISPATCH_QUEUE_CONCURRENT);
+    //backgroundQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0);
+    
+    NSOperationQueue * findHomeQueue = [[NSOperationQueue alloc]init];
+    findHomeQueue.name = @"com.inoho.findHomeQueue";
+    findHomeQueue.maxConcurrentOperationCount = 10;
+    
+    _foundHome = false;
+    _numSearches = 0;
+    for (int ii=2; ii<256; ii++) {
+        NSString * ipFirstPart = @"http://192.168.1.";
+        NSString * ipSecondPart = [@(ii) stringValue];
+        
+        NSString * wholeIp = [NSString stringWithFormat:@"%@%@", ipFirstPart, ipSecondPart];
+        NSLog(@"Going to Ping %@", wholeIp);
+        
+//        dispatch_async(backgroundQueue, ^(void) {
+//            [self isItHomeExt:wholeIp];
+//        });
+        
+        [findHomeQueue addOperationWithBlock:^{
+            [self isItHomeExt:wholeIp];
+        }];
+        
+    }
+    
+    
+    do {
+        //[NSThread sleepForTimeInterval:0.1];
+        if(_foundHome) {
+            [findHomeQueue cancelAllOperations];
+            break;
+        }
+    } while (_numSearches <254);
+    
+    NSLog(@"Home is at : %@", _homeIP);
+    //dispatch_release(backgroundQueue);
+}
+
+-(BOOL) isItHomeExt: (NSString *) homeAddress {
+    BOOL result = FALSE;
+    //[[NSRunLoop currentRunLoop] runUntilDate:[NSDate distantFuture]];
+    NSString* homeQueryAddress = [homeAddress stringByAppendingString: @"/inohocontroller"];
+    // Send a synchronous request
+    NSURLRequest * urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:homeQueryAddress]
+                                                 cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                             timeoutInterval:2.0];
+    
+    NSURLResponse * response = nil;
+    NSError * error = nil;
+    NSData * data = [NSURLConnection sendSynchronousRequest:urlRequest
+                                          returningResponse:&response
+                                                      error:&error];
+    
+    if (error == nil) {
+        // Parse data here
+        NSError *error = nil;
+        NSString *strData = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+        NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+        
+        if (error != nil) {
+            NSLog(@"Error parsing JSON.");
+            NSLog(@"%@", strData);
+        }
+        else {
+            NSLog(@"Array: %@ for %@", jsonObject, homeAddress);
+            if([jsonObject objectForKey:@"success"]){
+                result = TRUE;
+                _foundHome = true;
+                _homeIP = homeAddress;
+            }
+        }
+    } else {
+        NSLog(@"Its not home %@", homeAddress);
+        
+    }
+    _numSearches++;
+    return result;
+}
 
 @end
